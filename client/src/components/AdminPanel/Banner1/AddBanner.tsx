@@ -21,7 +21,7 @@ export function AddBanner1() {
         title: '',
     });
     const [fileSelected, setFileSelected] = useState('');
-    const [inputFileChange, setInputFileChange] = useState(false); //for input type file, because when we select an image(on update product case) we need to change url of image(its from backend or front live preview)
+    const [inputFileChange, setInputFileChange] = useState(false);
     const [errors, setErrors] = useState({} as IData);
     const [isLoading, setIsLoading] = useState(false);
     const { id } = useParams();
@@ -30,9 +30,6 @@ export function AddBanner1() {
     const { user } = useSelector((state: RootState) => state.user);
 
     const handleFileChange = (e: any) => {
-        // // To allow selecting the same image again, you'll need to reset the file input after removing the image from the live preview
-        // e.target.value = '';
-
         setFormData({ ...formData, image: e.target.files[0] });
         setFileSelected(e.target.files[0]);
         setInputFileChange(!inputFileChange);
