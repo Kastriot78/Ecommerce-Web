@@ -1,7 +1,5 @@
 # E-commerce App
 
-Live Project URL: https://betatech-ks.com/
-
 Welcome to the E-commerce App! This is a full-stack e-commerce application built using Node.js, React.js, TypeScript, MongoDB, and Redux Toolkit.
 
 ## Introduction
