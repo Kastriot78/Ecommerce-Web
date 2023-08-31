@@ -1,0 +1,286 @@
+.main-container {
+    margin-left: 230px;
+    /* min-height: calc(100vh - 130px); */
+    min-height: calc(100vh - 50px);
+    margin-top: 50px;
+    padding: 1.5625em;
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+/* General Table */
+.product-table-wrapper,
+.general-table-wrapper {
+    overflow: auto;
+}
+
+.general-table {
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.general-table * {
+    position: relative;
+}
+
+.general-table-wrapper table thead tr,
+.product-table-wrapper table thead tr {
+    height: 60px;
+    background: #173D60;
+}
+
+.general-table-wrapper thead th,
+.product-table-wrapper thead th {
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    padding-left: 40px;
+}
+
+.general-table-wrapper table tbody tr,
+.product-table-wrapper table tbody tr {
+    height: 50px;
+}
+
+.general-table-wrapper tbody tr,
+.product-table-wrapper tbody tr {
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: gray;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+.general-table-wrapper tbody tr:nth-child(even),
+.product-table-wrapper tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.general-table-wrapper tbody td,
+.product-table-wrapper tbody td {
+    padding-left: 40px;
+}
+
+.general-table-wrapper button,
+.product-table-wrapper button,
+.product-table-wrapper .edit-table-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #18527D;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0px;
+    padding: 0;
+}
+
+.product-table-wrapper td.actions {
+    padding: 0 30px;
+}
+
+/* General Table */
+
+/* scroll */
+.custom-scrollbar-vertical::-webkit-scrollbar,
+.custom-scrollbar-horizontal::-webkit-scrollbar {
+    width: 7px;
+    background-color: #e9e6e6;
+    height: 7px;
+    border-radius: 12px;
+}
+
+.custom-scrollbar-vertical::-webkit-scrollbar-corner,
+.custom-scrollbar-horizontal::-webkit-scrollbar-corner {
+    background: #D4D8DF;
+    border-radius: 12px;
+}
+
+.custom-scrollbar-vertical::-webkit-scrollbar-thumb,
+.custom-scrollbar-horizontal::-webkit-scrollbar-thumb {
+    background: rgba(186, 187, 189, 0.5);
+    border-radius: 100px;
+}
+
+.custom-scrollbar-vertical::-webkit-scrollbar-track,
+.custom-scrollbar-horizontal::-webkit-scrollbar-thumb {
+    background: #eeeef0;
+    border-radius: 12px;
+}
+
+.custom-scrollbar-vertical,
+.custom-scrollbar-horizontal {
+    scrollbar-color: #D4D8DF #eeeef0;
+    scrollbar-width: thin;
+}
+
+/* scroll */
+.add_category {
+    box-shadow: 0px 29.9688px 79.9167px rgb(0 0 0 / 0%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.add_category .title {
+    font-family: "Roboto";
+    font-size: 20px;
+    line-height: 29px;
+    color: #323B4B;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.add_category .form-control {
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.general-table-wrapper .approve-btn {
+    font-family: 'Roboto';
+    --webkit-align-items: center;
+    align-items: center;
+    background-color: #00b4e5;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+@media (max-width: 999px) {
+    .main-container {
+        margin-left: unset;
+        /* margin-top: 61px; */
+        margin-top: 115px;
+        /* min-height: calc(100vh - 141px); */
+        min-height: calc(100vh - 40px);
+    }
+
+    .system-sidebar {
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+
+    .sidebar-top {
+        padding-left: 35px;
+        padding-right: 35px;
+        justify-content: space-between;
+    }
+
+    .sidebar-main-elements {
+        height: 0px;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.5s ease-out;
+        transform-origin: top left;
+        min-height: 0px;
+    }
+
+    .sidebar-main-elements.active {
+        height: calc(100vh - 52px);
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s linear;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .general-table-wrapper table {
+        width: 100%;
+    }
+
+    .general-table-wrapper table thead {
+        display: none;
+    }
+
+
+    .general-table-wrapper table tbody tr td:before {
+        font-family: 'Roboto';
+        font-size: 14px;
+        color: #999;
+        line-height: 1.2;
+        font-weight: unset;
+        position: absolute;
+        width: 40%;
+        left: 30px;
+        top: 0;
+    }
+
+    .general-table-wrapper table tbody tr td:before {
+        content: attr(data-label);
+    }
+
+    .general-table-wrapper table tbody tr td {
+        padding-left: 46% !important;
+        margin-bottom: 18px;
+    }
+
+    .general-table-wrapper table>*,
+    .general-table-wrapper table tr,
+    .general-table-wrapper table td,
+    .general-table-wrapper table th {
+        display: block;
+    }
+
+    .general-table-wrapper table th {
+        width: 100%;
+    }
+
+    .general-table-wrapper table tbody tr {
+        height: auto;
+        padding: 37px 0;
+        overflow: auto;
+    }
+
+    .general-table-wrapper tbody tr {
+        font-size: 14px;
+    }
+
+    .general-table-wrapper button {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .general-table-wrapper table tbody tr td {
+        padding-left: 66% !important;
+    }
+
+    .general-table-wrapper thead th,
+    .product-table-wrapper thead th {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .general-table-wrapper table tbody tr td {
+        padding-left: 45% !important;
+    }
+
+    .add_color {
+        padding: 12px;
+    }
+
+    .add_color .title {
+        font-size: 18px;
+    }
+}

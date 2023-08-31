@@ -1,0 +1,33 @@
+.shop_cart_table .quantity {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.shop_cart_table td.product-price,
+.shop_cart_table td.product-subtotal {
+    font-weight: 600;
+}
+
+.empty_cart {
+    padding: 1em;
+    border: 1px dashed #eaeaea;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.empty_cart h3 {
+    font-size: 28px;
+}
+
+.product-remove button {
+    background-color: unset;
+}
+
+@media only screen and (max-width: 375px) {
+    .empty_cart h3 {
+        font-size: 22px;
+    }
+}

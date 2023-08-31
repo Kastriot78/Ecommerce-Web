@@ -1,0 +1,19 @@
+.login_wrap {
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+.padding_all {
+    padding: 8%;
+}
+
+.form_note {
+    margin-top: 20px;
+}
+
+.login_btn {
+    position: relative;
+}
+
+.sign_up_redirect {
+    color: #FF324D;
+}

@@ -1,0 +1,93 @@
+.product_header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.custom_select select {
+    height: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ced4da;
+    padding: 8px 35px 8px 15px;
+    width: 100%;
+}
+
+.custom_select::before {
+    content: "\f078";
+    font-family: 'fontAwesome';
+    position: absolute;
+    display: block;
+    color: #848484;
+    top: 50%;
+    right: 15px;
+    font-weight: 900;
+    pointer-events: none;
+    font-size: 12px;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.toggle_filters_categories-btn {
+    background-color: #FF324D;
+    color: #fff;
+}
+
+.toggle_filters_categories-btn:hover {
+    color: #fff;
+}
+
+.categories_filter_wrap .title {
+    font-size: 17px;
+    color: #292b2c;
+    font-family: 'Roboto';
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.categories_filter_wrap .widget_categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categories_filter_wrap .widget_categories li {
+    color: rgba(253, 86, 86, 1);
+    background-color: rgba(253, 86, 8, 0.05) !important;
+    /* padding: 0 17px; */
+    padding: 5px 17px;
+    height: 40px;
+    border-radius: 85px;
+    /* padding-bottom: 10px; */
+    margin-bottom: 10px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.categories_filter_wrap .widget_categories li:hover {
+    color: #FF324D;
+}
+
+.categories_filter_wrap .widget_categories li.active {
+    /* color: #FF324D; */
+    background-color: #FF324D !important;
+    color: #fff;
+    box-shadow: 0px 4px 20px rgb(253 86 86 / 20%);
+}
+
+@media (max-width: 920px) {
+    .categories_filter_wrap .widget_categories {
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,119 @@
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.shop_cart_table th,
+.shop_cart_table td,
+.wishlist_table th,
+.wishlist_table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.shop_cart_table th.product-name,
+.shop_cart_table td.product-name,
+.wishlist_table th.product-name,
+.wishlist_table td.product-name {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.wishlist_table .table td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.product-thumbnail img {
+    max-width: 100px;
+}
+
+.wishlist_table .badge,
+.shop_cart_table .badge {
+    line-height: normal;
+    vertical-align: middle;
+    padding: 2px 10px;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.wishlist_table a:hover {
+    cursor: pointer;
+}
+
+.wishlist_table .table td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.empty_wishlist {
+    padding: 1em;
+    border: 1px dashed #eaeaea;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.empty_wishlist h3 {
+    font-size: 28px;
+}
+
+.product_remove button {
+    background: unset;
+}
+
+@media only screen and (max-width: 991px) {
+    .product-thumbnail img {
+        max-width: 80px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .shop_cart_table thead,
+    .wishlist_table thead {
+        display: none;
+    }
+
+    .shop_cart_table td,
+    .wishlist_table .table td {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    .shop_cart_table td::before,
+    .wishlist_table td::before {
+        content: attr(data-title) " ";
+        float: left;
+        text-transform: capitalize;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+    .shop_cart_table td.product-name,
+    .wishlist_table td.product-name {
+        text-align: right;
+    }
+
+    .shop_cart_table td.product-thumbnail,
+    .shop_cart_table td.product-add-to-cart,
+    .wishlist_table td.product-thumbnail,
+    .wishlist_table td.product-add-to-cart {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .empty_wishlist h3 {
+        font-size: 22px;
+    }
+}

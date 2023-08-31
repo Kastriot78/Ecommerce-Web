@@ -1,0 +1,16 @@
+.empty_orders {
+    padding: 1em;
+    border: 1px dashed #eaeaea;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.empty_orders h3 {
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 375px) {
+    .empty_orders h3 {
+        font-size: 22px;
+    }
+}
